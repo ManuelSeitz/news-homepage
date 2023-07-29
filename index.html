@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="author" content="Manuel Seitz">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+
+  <!-- TAILWIND -->
+  <link href="/dist/output.css" rel="stylesheet">
+
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | News homepage</title>
+
+</head>
+<body class="min-h-screen grid place-content-center">
+  <div class="relative p-4 pt-0 overflow-hidden w-[min(calc(1111px+1rem),100%)] m-auto md:pt-4 pb-16">
+    <nav class="flex justify-between items-center h-[90px]">
+      <img src="/assets/images/logo.svg" alt="Logo" width="50">
+      <img src="/assets/images/icon-menu.svg" alt="Menu icon" class="z-20 md:hidden" id="menuIcon" aria-expanded="false" width="40">
+      <div class="absolute inset-0 bg-veryDarkBlue hidden opacity-30" id="blackScreen"></div>
+      <ul class="absolute bg-offWhite w-[68%] right-0 top-0 bottom-0 flex flex-col gap-5 pl-5 text-veryDarkBlue pt-36 translate-x-full transition-all duration-300 md:translate-x-0 md:relative md:flex-row md:pt-0 md:w-auto md:transition-none md:text-darkGrayishBlue md:gap-8" id="menu" role="menubar">
+        <li role="menuitem"><a href="#" class="hover:text-softRed">Home</a></li>
+        <li role="menuitem"><a href="#" class="hover:text-softRed">New</a></li>
+        <li role="menuitem"><a href="#" class="hover:text-softRed">Popular</a></li>
+        <li role="menuitem"><a href="#" class="hover:text-softRed">Trending</a></li>
+        <li role="menuitem"><a href="#" class="hover:text-softRed">Categories</a></li>
+      </ul>
+    </nav>
+    <div class="md:grid md:grid-cols-3 md:grid-rows-[repeat(2,auto)] md:gap-7 md:gap-y-14">
+      <header class="md:col-span-2">
+        <picture class="block md:mb-8">
+          <source media="(min-width: 768px)" srcset="/assets/images/image-web-3-desktop.jpg">
+          <img src="/assets/images/image-web-3-mobile.jpg" alt="Header image" class="m-auto">
+        </picture>
+        <div class="my-8 md:flex md:m-0 md:gap-7">
+          <h1 class="text-[2.5rem] text-veryDarkBlue font-extrabold leading-10 mb-4 md:text-[3.5rem] md:leading-[1] md:m-0 md:w-full">The Bright Future of Web 3.0?</h1>
+          <div class="md:basis-full md:flex md:flex-col md:justify-between">
+            <p class="text-darkGrayishBlue mb-6">We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?</p>
+            <button class="bg-softRed text-offWhite uppercase h-12 w-[185px] tracking-[.25rem] text-[15px] hover:bg-veryDarkBlue transition-colors">Read more</button>
+          </div>
+        </div>
+      </header>
+      <aside class="my-16 p-4 bg-veryDarkBlue text-offWhite md:m-0 md:flex md:flex-col md:justify-between md:p-6">
+        <h2 class="text-3xl font-bold text-softOrange mb-4 md:text-4xl md:m-0">New</h2>
+        <div class="my-7">
+          <h3 class="font-bold text-xl mb-2"><a href="#" class="hover:text-softOrange">Hydrogen VS Electric Cars</a></h3>
+          <p class="text-grayishBlue text-base">Will hydrogen-fueled cars ever catch up to EVs?</p>
+        </div>
+        <hr class="border-grayishBlue opacity-40">
+        <div class="my-7">
+          <h3 class="font-bold text-xl mb-2"><a href="#" class="hover:text-softOrange">The Downsides of AI Artistry</a></h3>
+          <p class="text-grayishBlue text-base">What are the possible adverse effects of on-demand AI image generation?</p>
+        </div>
+        <hr class="border-grayishBlue opacity-40">
+        <div class="my-7 mb-3">
+          <h3 class="font-bold text-xl mb-2"><a href="#" class="hover:text-softOrange">Is VC Funding Drying Up?</a></h3>
+          <p class="text-grayishBlue text-base">Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+        </div>
+      </aside>
+        <article class="my-8 flex gap-6 md:m-0 md:h-32">
+          <img src="/assets/images/image-retro-pcs.jpg" alt="Retro PC" width="100" class="object-cover">
+          <div class="flex flex-col justify-between">
+            <div class="text-grayishBlue font-bold text-3xl">01</div>
+            <h3 class="text-veryDarkBlue font-extrabold text-lg"><a href="#" class="hover:text-softRed">Reviving Retro PCs</a></h3>
+            <p class="text-darkGrayishBlue leading-6">What happens when old PCs are given modern upgrades?</p>
+          </div>
+        </article>
+        <article class="my-8 flex gap-6 md:m-0 md:h-32">
+          <img src="/assets/images/image-top-laptops.jpg" alt="Laptop" width="100" class="object-cover">
+          <div class="flex flex-col justify-between">
+            <div class="text-grayishBlue font-bold text-3xl">02</div>
+            <h3 class="text-veryDarkBlue font-extrabold text-lg"><a href="#" class="hover:text-softRed">Top 10 Laptops of 2022</a></h3>
+            <p class="text-darkGrayishBlue leading-6">Our best picks for various needs and budgets.</p>
+          </div>
+        </article>
+        <article class="my-8 flex gap-6 md:m-0 md:h-32">
+          <img src="/assets/images/image-gaming-growth.jpg" alt="Joystick" width="100" class="object-cover">
+          <div class="flex flex-col justify-between">
+            <div class="text-grayishBlue font-bold text-3xl">03</div>
+            <h3 class="text-veryDarkBlue font-extrabold text-lg"><a href="#" class="hover:text-softRed">The Growth of Gaming</a></h3>
+            <p class="text-darkGrayishBlue leading-6">How the pandemic has sparked fresh opportunities.</p>
+          </div>
+        </article>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
